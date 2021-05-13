@@ -1,0 +1,28 @@
+footer {
+  background-color: black;
+  img {
+    width: 35%;
+    -webkit-filter: invert(1);
+    padding: 6% 0;
+  }
+  i {
+    font-size: 0.8em;
+    padding-right: 3%;
+    margin: 0;
+  }
+  a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+  }
+}
+.contact {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.fa-hands-helping:before {
+  font-size: 0.7em;
+}

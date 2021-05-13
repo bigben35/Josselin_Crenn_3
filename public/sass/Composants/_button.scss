@@ -1,0 +1,37 @@
+.button {
+  background: linear-gradient(
+    to bottom right,
+    $colour-secondary,
+    $colour-primary
+  );
+
+  color: white;
+  border-radius: 15px;
+  padding: 2%;
+  margin: 5% 0 13%;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 5px 15px 0 $colour-primary;
+    filter: brightness(1.1);
+  }
+}
+
+.order {
+  display: block;
+  margin: auto;
+  padding: 3% 12%;
+  border-radius: 20px;
+  margin-top: 10%;
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom right,
+    $colour-secondary,
+    $colour-primary
+  );
+  color: white;
+  margin-bottom: 18%;
+  &:hover {
+    box-shadow: 0 5px 15px 0 $colour-primary;
+    filter: brightness(1.1);
+  }
+}

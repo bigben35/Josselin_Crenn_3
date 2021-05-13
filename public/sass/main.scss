@@ -1,0 +1,632 @@
+@import "./Utils/variables";
+@import "./Layout/_header";
+@import "./Composants/button";
+@import "./Layout/footer";
+@import "./Utils/animations";
+@import "./Utils/keyframes";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-y: scroll;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  font-family: "Roboto", "sans-serif";
+}
+.logo,
+.small_logo,
+.big_title {
+  font-family: "Shrikhand", "sans-serif";
+}
+
+h2 {
+  padding: 10% 0 5% 0%;
+  font-size: 1.3em;
+}
+h3 {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+aside {
+  background-color: $colour-background;
+  text-align: center;
+}
+.discover {
+  h1 {
+    font-size: 1.35em;
+    padding-top: 10%;
+    padding-bottom: 2%;
+  }
+  p {
+    opacity: 0.7;
+  }
+}
+.marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px darkgray;
+  padding: 3% 0;
+  font-weight: bold;
+  background-color: darkgray;
+  i {
+    margin-right: 5%;
+    margin-left: -10%;
+  }
+  p {
+    font-size: 1em;
+  }
+}
+
+nav {
+  margin: 0 5%;
+}
+.function {
+  display: flex;
+  align-items: baseline;
+  background-color: $colour-background;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 5% 0;
+  margin-bottom: 4%;
+  i {
+    padding: 0 10%;
+    color: grey;
+  }
+}
+.function_2 {
+  @extend.function;
+  margin-bottom: 15%;
+}
+
+.fa-store:before {
+  font-size: 0.9em;
+}
+ul {
+  list-style-type: none;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $colour-primary;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  padding-top: 1%;
+  position: absolute;
+  left: 2%;
+}
+nav li :hover {
+  background-color: $colour-function;
+  i {
+    color: $colour-primary;
+  }
+}
+
+#restaurants {
+  background-color: $colour-background;
+  margin-bottom: 0;
+  padding-bottom: 10%;
+}
+
+.container {
+  margin: 0 5%;
+}
+.box_container {
+  position: relative;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  &:hover {
+    box-shadow: 0 5px 15px 0 #96999b;
+    filter: brightness(1.02);
+    transform: scale(1.05);
+  }
+
+  img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.new {
+  position: absolute;
+  right: 4%;
+  background-color: $colour-tertiary;
+  font-weight: bold;
+  color: darkgreen;
+  padding: 1% 3%;
+  margin-top: 4%;
+}
+.subtitle {
+  margin-top: 2%;
+  margin-left: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p {
+  margin: 0;
+}
+
+.menu_title {
+  position: relative;
+}
+.plein {
+  position: absolute;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s;
+  left: 0px;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+.vide {
+  &:hover {
+    transition: all 2s;
+    opacity: 0;
+  }
+}
+
+.love_1 {
+  padding-right: 6%;
+  cursor: pointer;
+  position: relative;
+}
+.love {
+  cursor: pointer;
+  position: relative;
+}
+.fa-heart:before {
+  font-size: 1.2em;
+}
+
+/*ajout css pages menu*/
+
+.menu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  a {
+    margin-left: 5%;
+  }
+  img {
+    margin-right: 25%;
+    margin-left: 15%;
+  }
+}
+.main_image {
+  img {
+    width: 100%;
+  }
+}
+.note_Enchantee {
+  height: 250px;
+  object-fit: cover;
+}
+#main_section {
+  position: relative;
+  margin-top: -40px;
+  z-index: 2;
+  background-color: $colour-background;
+  border-radius: 25px;
+}
+
+.menu_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 10% 2% 5%;
+}
+.title_menu {
+  margin-left: 2%;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1em;
+  border-bottom: 3px solid $colour-tertiary;
+  width: 40px;
+  padding-bottom: 1%;
+}
+.menu_container {
+  padding: 0 3%;
+  padding-bottom: 1px;
+  p {
+    font-size: 0.8em;
+  }
+}
+.lunch {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.plats {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background-color: white;
+  height: 60px;
+  padding-left: 3%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 5px 15px 0 #96999b;
+    filter: brightness(1.02);
+  }
+
+  &:hover .price {
+    animation-delay: 0.5s;
+    transform: translateX(-40px);
+  }
+
+  &:hover .check {
+    visibility: visible;
+    width: 50px;
+  }
+
+  &:hover .check i {
+    animation: rotate 0.4s ease-in;
+    animation-delay: 0.1s;
+  }
+}
+
+.price {
+  font-weight: bold;
+  font-size: 0.8em;
+  position: absolute;
+  right: 5%;
+  transition: width 1s;
+  transition: transform 0.5s ease-in-out;
+  padding-top: 5%;
+}
+.meal {
+  font-size: 0.9em;
+}
+.title_plat {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  &:hover {
+    width: 75%;
+  }
+}
+.check {
+  border-radius: 0 10px 10px 0;
+  background-color: #99e2d0;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  transition: width 1s;
+  display: flex;
+  & i {
+    color: white;
+  }
+}
+
+main {
+  background-color: #eff1f2;
+}
+
+/*MEDIA QUERRIES*/
+
+/*max-width:576px*/
+
+@media screen and (max-width: 576px) {
+  .letter {
+    font-size: 50px;
+  }
+  .plats {
+    &:hover .title_plat p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 90%;
+    }
+  }
+}
+
+/*min-width:768px*/
+@media screen and (min-width: 768px) {
+  .main_image {
+    & img {
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+  .menu {
+    i {
+      font-size: 1.5em;
+    }
+  }
+  .menu_title {
+    padding: 6% 10% 0% 5%;
+    & .big_title {
+      font-size: 2.3em;
+    }
+    & i {
+      font-size: 1.7em;
+    }
+  }
+  .title_menu {
+    padding: 5% 0 1%;
+  }
+
+  .circle {
+    padding-top: 0.3%;
+    left: 3.5%;
+  }
+  .price {
+    padding: 2% 0 0;
+    right: 5%;
+  }
+  .plats:hover {
+    .check {
+      width: 60px;
+      & i {
+        font-size: 1.4em;
+      }
+    }
+  }
+  .order {
+    margin: 10% auto;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .contact {
+    text-align: center;
+    & img {
+      margin: auto;
+      width: 45%;
+      padding: 2% 0 4%;
+    }
+    i {
+      padding-right: 1%;
+    }
+    & a:hover {
+      transform: translateX(1.5%) scale(1.02);
+      width: 95%;
+    }
+  }
+  .subtitle {
+    margin-top: 1%;
+  }
+}
+
+/*MIN WIDTH:1024px*/
+@media screen and (min-width: 1024px) {
+  body {
+    margin-top: 2%;
+  }
+
+  header img {
+    width: 40%;
+  }
+  .menu {
+    & img {
+      margin-right: 33%;
+      margin-left: 20%;
+    }
+    & i {
+      font-size: 1.5em;
+    }
+  }
+  .menu_title {
+    padding: 6% 28% 0% 30%;
+    & .big_title {
+      font-size: 2.8em;
+      font-style: italic;
+    }
+  }
+  .menu_container {
+    padding: 0 12%;
+    padding-bottom: 1px;
+  }
+  .marker {
+    padding: 2%;
+  }
+  .discover h1 {
+    padding: 4% 0 2%;
+  }
+
+  .button {
+    margin: 5%;
+  }
+  nav h2 {
+    padding: 5% 0;
+  }
+  ul {
+    display: flex;
+    column-gap: 5%;
+    margin-bottom: 5%;
+    & li {
+      width: 30%;
+    }
+  }
+
+  .function,
+  .function_2 {
+    margin-bottom: 0;
+    & .circle {
+      position: relative;
+      left: -4%;
+      padding-top: 1%;
+    }
+    & i {
+      padding: 0 7%;
+    }
+  }
+  #restaurants {
+    padding-bottom: 5%;
+  }
+  .container {
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    & h2 {
+      width: 100%;
+      padding-top: 6%;
+    }
+    & .box_container {
+      width: 45%;
+    }
+  }
+
+  .contact {
+    padding: 0 0 3% 0;
+    & img {
+      width: 30%;
+      padding: 3% 0 2%;
+    }
+  }
+  .price {
+    right: 5%;
+    padding-top: 1%;
+  }
+  .plats:hover {
+    & .check {
+      width: 8%;
+    }
+  }
+  .contact i {
+    font-size: 0.9em;
+  }
+  .fa-hands-helping::before {
+    font-size: 1em;
+  }
+}
+
+/*MIN-WIDTH:1440px*/
+
+@media screen and (min-width: 1440px) {
+  header {
+    margin-bottom: 1%;
+    & img {
+      width: 25%;
+    }
+    & i {
+      font-size: 1.8em;
+    }
+  }
+  .menu {
+    img {
+      margin-right: 38%;
+      margin-left: 21%;
+    }
+  }
+  .main_image {
+    width: 80%;
+    margin: auto;
+  }
+  .menu_title {
+    padding: 3% 31% 3% 33%;
+
+    &.big_title {
+      font-size: 3em;
+    }
+    &.love {
+      font-size: 1.2em;
+    }
+  }
+  .menu_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    column-gap: 3.5%;
+    margin: 0 5%;
+  }
+  .lunch {
+    width: 31%;
+  }
+
+  .order {
+    margin: 5% auto;
+    padding: 2% 6%;
+  }
+  .discover {
+    & .marker {
+      padding: 1%;
+    }
+    & h1 {
+      padding: 2% 0 1%;
+    }
+  }
+  .button {
+    margin: 2%;
+  }
+  nav {
+    h2 {
+      padding: 3% 0;
+    }
+  }
+  .function,
+  .function_2 {
+    padding: 5% 10%;
+    & .circle {
+      left: -15%;
+    }
+  }
+  #restaurants {
+    padding-bottom: 0;
+  }
+  .container {
+    h2 {
+      padding: 3% 0;
+    }
+    & .box_container {
+      width: 21%;
+    }
+  }
+
+  .price {
+    right: 7%;
+  }
+
+  .plats:hover {
+    & .price {
+      padding-top: 1%;
+    }
+
+    & .check {
+      width: 15%;
+    }
+  }
+  .contact {
+    padding-bottom: 2%;
+
+    & img {
+      width: 20%;
+      padding: 2% 0 1%;
+    }
+  }
+}

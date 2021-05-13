@@ -1,0 +1,104 @@
+/*ANIMATIONS LOADER*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 10;
+  animation: loader 3s forwards;
+  display: flex;
+}
+
+.loading-spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flash 1s forwards;
+  -webkit-animation: flash 1s forwards;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.letter {
+  color: #fff;
+  font-size: 100px;
+  letter-spacing: 2px;
+  font-family: "Shrikhand";
+  animation: flash 1.5s linear infinite;
+  -webkit-animation: flash 1.5s linear infinite;
+}
+
+.letter:nth-child(1) {
+  animation-delay: 100ms;
+}
+.letter:nth-child(2) {
+  animation-delay: 200ms;
+}
+.letter:nth-child(3) {
+  animation-delay: 300ms;
+}
+.letter:nth-child(4) {
+  animation-delay: 400ms;
+}
+.letter:nth-child(5) {
+  animation-delay: 500ms;
+}
+.letter:nth-child(6) {
+  animation-delay: 600ms;
+}
+.letter:nth-child(7) {
+  animation-delay: 700ms;
+}
+.letter:nth-child(8) {
+  animation-delay: 800ms;
+}
+.letter:nth-child(9) {
+  animation-delay: 900ms;
+}
+.letter:nth-child(10) {
+  animation-delay: 1000ms;
+}
+
+/*ANIMATIONS PLATS*/
+
+.fade {
+  animation: fadeIn 4s forwards;
+}
+
+.fade_1 {
+  animation: fadeIn 0.4s;
+}
+.fade_2 {
+  animation: fadeIn 0.8s;
+}
+.fade_3 {
+  animation: fadeIn 1.2s;
+}
+.fade_10 {
+  animation: fadeIn 1.4s;
+}
+.fade_4 {
+  animation: fadeIn 1.6s;
+}
+.fade_5 {
+  animation: fadeIn 2s;
+}
+.fade_6 {
+  animation: fadeIn 2.4s;
+}
+.fade_7 {
+  animation: fadeIn 2.8s;
+}
+.fade_8 {
+  animation: fadeIn 3.2s;
+}
+.fade_9 {
+  animation: fadeIn 3.6s;
+}
