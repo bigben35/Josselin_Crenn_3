@@ -57,10 +57,10 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px darkgray;
+  border: solid 1px #eaeaea;
   padding: 3% 0;
   font-weight: bold;
-  background-color: darkgray;
+  background-color: #eaeaea;
   i {
     margin-right: 5%;
     margin-left: -10%;
@@ -287,7 +287,7 @@ p {
 
   &:hover .check {
     visibility: visible;
-    width: 50px;
+    width: 40px;
   }
 
   &:hover .check i {
@@ -334,7 +334,7 @@ p {
 }
 
 main {
-  background-color: #eff1f2;
+  background-color: $colour-background;
 }
 
 /*MEDIA QUERRIES*/
@@ -398,9 +398,10 @@ main {
     }
   }
   .order {
-    margin: 10% auto;
     font-size: 1.2em;
-    font-weight: bold;
+    margin: 8% 35%;
+    padding: 2% 3%;
+    border-radius: 25px;
   }
   .contact {
     text-align: center;
@@ -431,6 +432,10 @@ main {
   header img {
     width: 40%;
   }
+  .button {
+    padding: 1%;
+    margin: 3%;
+  }
   .menu {
     & img {
       margin-right: 33%;
@@ -458,9 +463,6 @@ main {
     padding: 4% 0 2%;
   }
 
-  .button {
-    margin: 5%;
-  }
   nav h2 {
     padding: 5% 0;
   }
@@ -570,8 +572,8 @@ main {
   }
 
   .order {
-    margin: 5% auto;
-    padding: 2% 6%;
+    margin: 4% auto;
+    padding: 1% 4%;
   }
   .discover {
     & .marker {
@@ -582,7 +584,8 @@ main {
     }
   }
   .button {
-    margin: 2%;
+    margin: 25px;
+    padding: 0.5%;
   }
   nav {
     h2 {
@@ -618,7 +621,7 @@ main {
     }
 
     & .check {
-      width: 15%;
+      width: 12%;
     }
   }
   .contact {
@@ -628,5 +631,13 @@ main {
       width: 20%;
       padding: 2% 0 1%;
     }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .button,
+  .order {
+    margin: 3% auto;
+    padding: 1% 3%;
   }
 }

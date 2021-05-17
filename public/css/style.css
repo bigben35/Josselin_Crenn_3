@@ -9,11 +9,13 @@ header img {
 
 .button {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  display: inline-block;
   color: white;
   border-radius: 15px;
-  padding: 2%;
-  margin: 5% 0 13%;
+  padding: 2% 5%;
+  margin: 5% 0 9%;
   cursor: pointer;
+  font-size: 0.9em;
 }
 .button:hover {
   box-shadow: 0 5px 15px 0 #9356dc;
@@ -22,14 +24,14 @@ header img {
 
 .order {
   display: block;
-  margin: auto;
-  padding: 3% 12%;
+  text-align: center;
+  padding: 4% 10%;
   border-radius: 20px;
-  margin-top: 10%;
   cursor: pointer;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   color: white;
-  margin-bottom: 18%;
+  font-size: 0.9em;
+  margin: 10% 20% 12%;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .order:hover {
   box-shadow: 0 5px 15px 0 #9356dc;
@@ -315,7 +317,7 @@ a {
 }
 
 aside {
-  background-color: #e9e9e9;
+  background-color: #f6f6f6;
   text-align: center;
 }
 
@@ -332,10 +334,10 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px darkgray;
+  border: solid 1px #eaeaea;
   padding: 3% 0;
   font-weight: bold;
-  background-color: darkgray;
+  background-color: #eaeaea;
 }
 .marker i {
   margin-right: 5%;
@@ -352,7 +354,7 @@ nav {
 .function, .function_2 {
   display: flex;
   align-items: baseline;
-  background-color: #e9e9e9;
+  background-color: #f6f6f6;
   border-radius: 10px;
   font-weight: bold;
   font-size: 0.9em;
@@ -397,7 +399,7 @@ nav li :hover i {
 }
 
 #restaurants {
-  background-color: #e9e9e9;
+  background-color: #f6f6f6;
   margin-bottom: 0;
   padding-bottom: 10%;
 }
@@ -512,7 +514,7 @@ p {
   position: relative;
   margin-top: -40px;
   z-index: 2;
-  background-color: #e9e9e9;
+  background-color: #f6f6f6;
   border-radius: 25px;
 }
 
@@ -572,7 +574,7 @@ p {
 }
 .plats:hover .check {
   visibility: visible;
-  width: 50px;
+  width: 40px;
 }
 .plats:hover .check i {
   animation: rotate 0.4s ease-in;
@@ -620,7 +622,7 @@ p {
 }
 
 main {
-  background-color: #eff1f2;
+  background-color: #f6f6f6;
 }
 
 /*MEDIA QUERRIES*/
@@ -680,9 +682,10 @@ main {
   }
 
   .order {
-    margin: 10% auto;
     font-size: 1.2em;
-    font-weight: bold;
+    margin: 8% 35%;
+    padding: 2% 3%;
+    border-radius: 25px;
   }
 
   .contact {
@@ -715,6 +718,11 @@ main {
     width: 40%;
   }
 
+  .button {
+    padding: 1%;
+    margin: 3%;
+  }
+
   .menu img {
     margin-right: 33%;
     margin-left: 20%;
@@ -742,10 +750,6 @@ main {
 
   .discover h1 {
     padding: 4% 0 2%;
-  }
-
-  .button {
-    margin: 5%;
   }
 
   nav h2 {
@@ -864,8 +868,8 @@ main {
   }
 
   .order {
-    margin: 5% auto;
-    padding: 2% 6%;
+    margin: 4% auto;
+    padding: 1% 4%;
   }
 
   .discover .marker {
@@ -876,7 +880,8 @@ main {
   }
 
   .button {
-    margin: 2%;
+    margin: 25px;
+    padding: 0.5%;
   }
 
   nav h2 {
@@ -911,7 +916,7 @@ main {
     padding-top: 1%;
   }
   .plats:hover .check {
-    width: 15%;
+    width: 12%;
   }
 
   .contact {
@@ -920,6 +925,13 @@ main {
   .contact img {
     width: 20%;
     padding: 2% 0 1%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .button,
+.order {
+    margin: 3% auto;
+    padding: 1% 3%;
   }
 }
 
